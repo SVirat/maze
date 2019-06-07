@@ -41,13 +41,16 @@ $(function () {
     }
   
     function drawPlayers(players) {
+      var count = 0;
       for (var uid in players) {
+        count++;
         if (uid == UID) {
           updatePlayerLocation(UID, POS, false);
         } else {
           updatePlayerLocation(uid, players[uid], false);
         }
       }
+      document.getElementById("numPlayers").innerHTML=count;
     }
   
     function updatePlayerLocation(uid, coord, write = true) {
