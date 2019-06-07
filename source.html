@@ -32,19 +32,21 @@
       height: 60px
     }
 
-    .maze {
-      float: left;
-    }
+    table {
+  display: inline-block;
+  /** this works too */
+  display: inline-table;
+  float: left;
+}​
 
-    .text {
+    div.text {
       float: right;
     }
 
   </style>
   <title>Maze by Virat Singh</title>
 
-  <div class="maze" style='position:absolute' id=players>
-  </div>
+  <div style='position:absolute' id=players></div>
   <table>
     <TR>
       <TD>
@@ -59,7 +61,33 @@
       Use buttons (or arrow-keys) to move to the bottom-right.
       <BR><BR>
   
-      <div style='width:500px'>
+        <div id=buttons>
+            <center>
+              <table>
+                <TR>
+                  <TD></td>
+                  <TD>
+                    <center> <input type=button class=button value="Up" onclick="goUp()"></center>
+                  </td>
+                  <TD>
+                  </td>
+                </tr>
+                <TR>
+                  <TD>
+                    <input type=button class=button value="Left" onclick="goLeft()"></td>
+                  <TD>
+                    <input type=button class=button value="Down" onclick="goDown()">
+                  </td>
+                  <TD>
+                    <input type=button class=button value="Right" onclick="goRight()">
+                  </td>
+                </tr>
+              </table>
+            </center>
+          </div>
+
+          <BR><BR><BR><BR><BR><BR><BR>
+
         This demo is brought to you by
         <a target=_blank href="http://algoexpert.io/techlead">http://algoexpert.io/techlead</a>, for over 70 videos on
         coding interview questions covering data structures, algorithms, time-space
@@ -74,32 +102,8 @@
       <BR>
     
       Built at <a href="https://www.youtube.com/watch?v=H7kvrvtpdYg">http://youtube.com/techlead</a>
-      </div>
       <BR><BR><BR>
-      <div id=buttons>
-        <center>
-          <table>
-            <TR>
-              <TD></td>
-              <TD>
-                <center> <input type=button class=button value="Up" onclick="goUp()"></center>
-              </td>
-              <TD>
-              </td>
-            </tr>
-            <TR>
-              <TD>
-                <input type=button class=button value="Left" onclick="goLeft()"></td>
-              <TD>
-                <input type=button class=button value="Down" onclick="goDown()">
-              </td>
-              <TD>
-                <input type=button class=button value="Right" onclick="goRight()">
-              </td>
-            </tr>
-          </table>
-        </center>
-      </div>
+      
     </div>
 
 </body>
